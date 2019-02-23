@@ -288,7 +288,7 @@ def query_user_info(user):
     try:
         user_info = query_user_page(INIT_URL_USER.format(u=user))
         if user_info:
-            logger.info(f"Got user information from username {user}")
+            logger.info("Got user information from username {user}")
             return user_info
 
     except KeyboardInterrupt:
