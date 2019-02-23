@@ -161,10 +161,10 @@ def query_tweets_once_generator(query, limit=None, lang='', pos=None):
     except KeyboardInterrupt:
         logger.info('Program interrupted by user. Returning tweets gathered '
                      'so far...')
-    except BaseException:
-        logger.exception('An unknown error occurred! Returning tweets '
-                          'gathered so far.')
-    logger.info('Got {} tweets for {}.'.format(
+    #except BaseException:
+    #    logger.exception('An unknown error occurred! Returning tweets '
+    #                      'gathered so far.')
+    logger.info(dt.datetime.now().isoformat() + ': Got {} tweets for {}.'.format(
         num_tweets, query))
 
 
