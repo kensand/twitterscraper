@@ -99,9 +99,9 @@ def query_single_page(query, lang, pos, retry=50, from_user=False):
     except requests.exceptions.HTTPError as e:
         logger.exception('HTTPError {} while requesting "{}"'.format(
             e, url))
-    except requests.exceptions.ConnectionError as e:
-        logger.exception('ConnectionError {} while requesting "{}"'.format(
-            e, url))
+    #except requests.exceptions.ConnectionError as e:
+    #    logger.exception('ConnectionError {} while requesting "{}"'.format(
+    #        e, url))
     except requests.exceptions.Timeout as e:
         logger.exception('TimeOut {} while requesting "{}"'.format(
             e, url))
